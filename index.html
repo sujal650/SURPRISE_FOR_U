@@ -226,7 +226,7 @@
 <div id="step1" class="glass-card active-card text-center">
     <span class="pulse-heart">❤️</span>
     <h1 class="text-3xl font-bold mb-4 text-gradient">Hey Beautiful❤️</h1>
-    <p class="text-gray-300 mb-6 text-sm">Ninna Ee Vishesha Dinake, Ninna Mukhada Mele Nagu Tarsoke, Naanu Ninagaagi Ondu Putta Surprise Maadidini.</p>
+    <p class="text-gray-300 mb-6 text-sm">Ninna Ee Vishesha Dinadandu, Ninna Mukhada Mele Nagu Tarsoke, Naanu Ninagaagi Ondu Putta Surprise Maadidini.</p>
     
     <!-- Corrected Button: Plays audio then moves to next step -->
     <button onclick="document.getElementById('bgMusic').play(); nextStep(2)" class="btn-primary">
@@ -273,7 +273,7 @@
             <h2 class="text-2xl font-bold mb-2 text-gradient">Nenapidiya? Aa Ondu Sala Naavu...</h2>
             <div class="polaroid-wrapper">
                 <div class="polaroid" id="polaroid-1">
-                    <img src="https://i.ibb.co/wZh1ZwBx/fav.jpg" alt="Memory">
+                    <img src="https://content.tupaki.com/h-upload/2024/04/25/366681-unxv800b.gif" alt="Memory">
                     <span>Our favorite memory.</span>
                 </div>
             </div>
@@ -287,14 +287,16 @@
             <h2 class="text-2xl font-bold mb-4 text-gradient">My Wish For You</h2>
             <div class="polaroid-wrapper">
                 <div class="polaroid" id="polaroid-2">
-                    <img src="https://i.ibb.co/vxSH83tx/Generated-Image-September-12-2025-7-15-PM.png" alt="Birthday Queen">
+                    <img src="https://content.tupaki.com/h-upload/2024/04/25/366681-unxv800b.gif" alt="Birthday Queen">
                     <span>LOVE YOU CHINNA🙈💜.</span>
                     <span>YOU'RE MY TODO🌏.</span>
                 </div>
             </div>
+            <div id="final-message" class=" hidden text-xl font-bold text-pink-400 mb-6">❤️</div>
+            <p class="  text-xl font-bold text-pink-400 mb-6">Happy Birthday, My Favorite Person! ❤️</p>
             <p class="text-gray-300 mb-6 text-sm">Mundina varsha ninage sigabekaada ella preeti mattu nijaada santhosha sigali.</p>
-            <div id="final-message" class="hidden text-xl font-bold text-pink-400 mb-6">Happy Birthday, My Favorite Person! ❤️</div>
-            <button id="celebrate-btn" onclick=document.getElementById('popMusic').play(); startFinale()" class="btn-primary">Celebrate!</button>
+            
+            <button id="celebrate-btn" onclick="document.getElementById('popMusic').play(); startFinale()" class="btn-primary">Celebrate!</button>
         </div>
     </div>
 
@@ -303,7 +305,7 @@
     const audio = document.getElementById('bgMusic');
 
     // Set volume to 50%
-    audio.volume = 0.5;
+    audio.volume = 0.05;
 
         /* --- THREE.JS BACKGROUND --- */
         let scene, camera, renderer, hearts = [];
@@ -401,7 +403,7 @@
             const finalMsg = document.getElementById('final-message');
             
             gsap.to(btn, { duration: 0.3, autoAlpha: 0, scale: 0.5, display: 'none' });
-            finalMsg.classList.remove('hidden');
+            //finalMsg.classList.remove('hidden');
             gsap.from(finalMsg, { duration: 1, y: 20, opacity: 0, ease: "bounce.out" });
 
             const duration = 15 * 1000;
@@ -451,9 +453,4 @@
         });
     </script>
 </body>
-
 </html>
-
-
-
-
