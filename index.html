@@ -210,6 +210,7 @@
 </head>
 <body>
 <audio id="bgMusic" src="birthdaysong.mp3" loop></audio/mpeg>
+<audio id="popMusic" src="pop.mp3" loop(5)></audio/mpeg>
 
 
     <div class="aurora-bg"></div>
@@ -293,7 +294,7 @@
             </div>
             <p class="text-gray-300 mb-6 text-sm">Mundina varsha ninage sigabekaada ella preeti mattu nijaada santhosha sigali.</p>
             <div id="final-message" class="hidden text-xl font-bold text-pink-400 mb-6">Happy Birthday, My Favorite Person! ❤️</div>
-            <button id="celebrate-btn" onclick="startFinale()" class="btn-primary">Celebrate!</button>
+            <button id="celebrate-btn" onclick="document.getElementById('bgMusic').pause();document.getElementById('popMusic').play(); startFinale()" class="btn-primary">Celebrate!</button>
         </div>
     </div>
 
