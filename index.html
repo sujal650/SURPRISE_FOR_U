@@ -209,6 +209,8 @@
     </style>
 </head>
 <body>
+<audio id="bgMusic" src="birthdaysong.mp3" loop></audio/mpeg>
+
 
     <div class="aurora-bg"></div>
     <canvas id="heart-canvas"></canvas>
@@ -219,12 +221,17 @@
 
     <div class="card-wrapper">
         <!-- Step 1 -->
-        <div id="step1" class="glass-card active-card text-center">
-            <span class="pulse-heart">❤️</span>
-            <h1 class="text-3xl font-bold mb-4 text-gradient">Hey Beautiful❤️</h1>
-            <p class="text-gray-300 mb-6 text-sm">Ninna Ee Vishesha Dinadandu, Ninna Mukhada Mele Nagu Tarsoke, Naanu Ninagaagi Ondu Putta Surprise Maadidini.</p>
-            <button onclick="nextStep(2)" class="btn-primary">Let's Begin</button>
-        </div>
+
+<div id="step1" class="glass-card active-card text-center">
+    <span class="pulse-heart">❤️</span>
+    <h1 class="text-3xl font-bold mb-4 text-gradient">Hey Beautiful❤️</h1>
+    <p class="text-gray-300 mb-6 text-sm">Ninna Ee Vishesha Dinadandu, Ninna Mukhada Mele Nagu Tarsoke, Naanu Ninagaagi Ondu Putta Surprise Maadidini.</p>
+    
+    <!-- Corrected Button: Plays audio then moves to next step -->
+    <button onclick="document.getElementById('bgMusic').play(); nextStep(2)" class="btn-primary">
+        Let's Begin
+    </button>
+</div>
 
         <!-- Step 2 -->
         <div id="step2" class="glass-card text-center">
@@ -291,6 +298,12 @@
     </div>
 
     <script>
+        // Get the audio element
+    const audio = document.getElementById('bgMusic');
+
+    // Set volume to 50%
+    audio.volume = 0.05;
+
         /* --- THREE.JS BACKGROUND --- */
         let scene, camera, renderer, hearts = [];
         let isFinale = false;
